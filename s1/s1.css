@@ -1,0 +1,120 @@
+.ui-tabs{
+    border: 2px solid #9CC;
+    background: #ddd;/*def;*/
+    padding-bottom: 20px;
+}
+.ui-tabs-panel{
+    max-height: 500px;
+    /*min-width: 600px;*/
+    font-size: 10pt;
+    font-family: Arial;
+    overflow: auto;
+}
+
+.ui-tabs-nav{
+    font-size: 10pt;
+    background: #fff;
+    border: 1px solid #9cf;
+}
+
+.ui-tabs-anchor{
+    background: url('../barra.png') repeat-x;/*#adf;*/
+    border: 1px solid #9cf;
+}
+
+.ui-tabs-active a{
+    background: url('../barra_ativa.png') repeat-x;
+    border-bottom: none;
+}
+
+.ui-tabs-panel a{
+    color: blue;
+}
+        
+.ui-tabs-panel p {
+    /*text-align: right;*/
+    /*margin: 0;*/
+}
+        
+/*.ui-tabs-panel p input[type="button"]{
+    height: 60px;
+    width: 55px;
+    margin: 0;
+    color: transparent;
+}*/
+        
+.ui-tabs-panel ul li{
+    /*padding: 10px;*/
+}
+
+.ui-tabs-panel table label{
+    font-weight: bold;
+}
+
+.ui-tabs-panel table td{
+    font-size: 10pt;
+    padding-bottom: 8px;
+    vertical-align: top;
+}
+
+.ui-dialog{
+    border: 2px solid #05a;
+    background: #ddf;
+    box-shadow: 5px 5px 8px #040;
+}
+
+.ui-dialog input, .ui-dialog textarea, .ui-dialog select, .ui-dialog td{
+    font-size: 10pt;
+}
+
+.ui-dialog-titlebar{
+    background: #048;
+    border: 1px solid #05a;
+    color: white;
+}
+
+.ui-dialog-titlebar .ui-button{
+    display: none;
+}
+
+.ui-dialog-title{
+    font-family: "Arial";
+}
+
+.ui-dialog-buttonpane{
+    background: #def;
+}
+
+.ui-dialog-buttonset .ui-button{
+    background: #acf;
+    font-size: 11pt;
+    color: #000;
+    border: 1px solid #05a;
+    border-radius: 4px;
+    border-style: outset;
+}
+
+.ui-dialog-buttonset .ui-button:active{
+    border-style: inset;
+}
+
+.ui-dialog-content input[type="button"]{
+    height: 50px;
+    width: 100px;
+    font-size: 11pt;
+}
+
+.aviso_interno{
+    font-style: italic;
+    color: red;
+}
+
+#titulo_s1{
+    background: url('ajudancia/imagens/fundo_h2.png');/*#4af;*/
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5px;
+    color: white;
+}

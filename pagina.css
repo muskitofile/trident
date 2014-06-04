@@ -1,0 +1,18 @@
+body{
+    font-size: 10pt;
+    font-family: Arial;
+    background: url('fundo.png');
+}
+
+#boas-vindas {
+    background: url('s1/ajudancia/imagens/fundo_h2.png');
+    padding: 5px;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+}
+
+#raiz td{
+    margin-right: 10px;
+    vertical-align: top;
+}

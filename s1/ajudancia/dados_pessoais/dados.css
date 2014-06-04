@@ -1,0 +1,300 @@
+.label{
+    text-align: right;
+}
+
+#fld_ident input, #fld_ident select{
+    font-size: 10pt;
+    font-family: "Arial";
+    border: 1px solid black;
+    border-style: inset;
+    border-radius: 3px;
+    /*color: transparent;*/
+}
+
+#fld_ident{
+    border-radius: 10px;
+}
+
+#fld_ident legend{
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+#fld_ident input:focus, #fld_ident select:focus{
+    box-shadow: 0px 0px 5px #0a0;
+}
+
+#tabs-Militar li, #tabs-Militar a{
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+#fld_novo_usuario{
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px black;
+    background: white;
+}
+
+#fld_novo_usuario legend{
+    background: white;
+    font-weight: bold;
+}
+
+#fld_novo_usuario td{
+    vertical-align: top;
+    padding-bottom: 5px;
+    /*padding-left: 20px;*/
+}
+
+#fld_novo_usuario input[type="submit"]{
+    height: 55px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    /*background: none;*/
+}
+
+#fld_novo_usuario input[type="submit"]:hover, #fld_novo_usuario input[type="submit"]:focus{
+    box-shadow: 1px 1px 3px black;
+}
+
+#fld_novo_usuario input[type="submit"]:active, #fld_novo_usuario input[type="submit"]:focus{
+    box-shadow: none;
+}
+
+#fld_novo_usuario input[type="text"], #fld_novo_usuario select{
+    /*box-shadow: 0px 0px 5px #08f;
+    background: #def;*/
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+#fld_novo_usuario input[type="text"]:focus, #fld_novo_usuario select:focus{
+    box-shadow: 0px 0px 5px #08f;
+    background: #def;
+    /*border-radius: 5px;*/
+}
+
+#dados_pessoais{
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px black;
+    background: white;
+}
+
+#dados_pessoais legend{
+    background: white;
+    font-weight: bold;
+}
+
+#dados_pessoais td{
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+#dados_pessoais input[type="submit"]{
+    height: 55px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    /*background: none;*/
+}
+
+#dados_pessoais input[type="submit"]:hover,#dados_pessoais input[type="submit"]:focus{
+    box-shadow: 1px 1px 3px black;
+}
+
+#dados_pessoais input[type="submit"]:active{
+    box-shadow: none;
+}
+
+#dados_pessoais input[type="text"], #fld_novo_usuario select{
+    /*box-shadow: 0px 0px 5px #08f;
+    background: #def;*/
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+#dados_pessoais input[type="text"]:focus, #fld_novo_usuario select:focus{
+    box-shadow: 0px 0px 5px #08f;
+    background: #def;
+    /*border-radius: 5px;*/
+}
+
+fieldset.edita_usuario{
+    box-shadow: 1px 1px 2px black;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background: #ddd;
+}
+
+fieldset.edita_usuario legend{
+    border-radius: 4px;
+    background: inherit;
+    font-weight: bold;
+    padding: 10px;
+}
+
+fieldset.edita_usuario input[type="submit"]{
+    height: 40px;
+    color: transparent;
+    box-shadow: 1px 1px 1px black;
+    border: none;
+    border-radius: 3px;
+    width: 133px;
+}
+
+fieldset.edita_usuario input[type="submit"]:active{
+    box-shadow: none;
+}
+
+input.cancel{
+    background-image: url('imagens/cancel.png');
+    background-repeat: no-repeat;
+}
+
+input.ok{
+    background-image: url('imagens/ok.png');
+    background-repeat: no-repeat;
+}
+
+input.proximo{
+    background-image: url('imagens/proximo2.png');
+    background-repeat: no-repeat;
+}
+
+input.anterior{
+    background-image: url('imagens/anterior2.png');
+    background-repeat: no-repeat;
+}
+
+#edita_foto{
+    /*background-image: url('imagens/edita_foto.png');*/
+    background-repeat: no-repeat;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #aaa;
+}
+
+#edita_foto:active{
+    box-shadow: none;
+}
+
+#exclui_foto{
+    /*background-image: url('imagens/edita_foto.png');*/
+    background-repeat: no-repeat;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #aaa;
+}
+
+#exclui_foto:active{
+    box-shadow: none;
+}
+
+#foto{
+    border: 1px solid #aaa;
+    margin: 0;
+    height: 120px;
+    width: auto;
+}
+
+#table_fones td, #table_fones tr{
+    margin: 0;
+    padding: 0;
+}
+
+#table_fones input[type="button"]{
+    height: 23px;
+    width: 24px;
+    margin-left: 1px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+#table_fones input[type="button"]:hover, #table_fones input[type="button"]:focus{
+    box-shadow: 1px 1px 2px black;
+}
+
+#table_fones input[type="button"]:active{
+    box-shadow: none;
+}
+
+#table_fones select{
+    height: 100%;
+    width: 120px;
+}
+
+#table_emails td, #table_fones tr{
+    margin: 0;
+    padding: 0;
+}
+
+#table_emails input[type="button"]{
+    height: 23px;
+    width: 24px;
+    margin-left: 1px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+#table_emails input[type="button"]:hover, #table_fones input[type="button"]:focus{
+    box-shadow: 1px 1px 2px black;
+}
+
+#table_emails input[type="button"]:active{
+    box-shadow: none;
+}
+
+#slc_tipo{
+    height: 100%;
+    width: 80px;
+}
+
+#slc_emails{
+    height: 100%;
+    width: 220px;
+}
+
+input[type="text"][name="email"]{
+    text-transform: lowercase;
+    width: 200px;
+}
+
+input[type="text"][name="nome"]{
+    text-transform: uppercase;
+}
+
+input[type="text"][name="saram"]{
+    width: 60px;
+}
+
+#text_fone{
+    width: 80px;
+    margin: 0;
+}
+
+#text_ddd{
+    width: 25px;
+    margin: 0;
+}
+
+#btn_up{
+    background-image: url('imagens/up.png');
+    background-repeat: no-repeat;
+}
+
+#btn_down{
+    background-image: url('imagens/down.png');
+    background-repeat: no-repeat;
+}
+
+#btn_del{
+    background-image: url('imagens/del.png');
+    background-repeat: no-repeat;
+}
+
+#btn_add{
+    background-image: url('imagens/add.png');
+    background-repeat: no-repeat;
+    margin-right: 2px; 
+}
