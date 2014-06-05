@@ -1,0 +1,60 @@
+div.calend{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10pt;
+}
+td.out{
+	background: url("fundo_calend.png") repeat;
+}
+td.calend{
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+	background: white;/*url("fundo_cell_transparente.png") repeat;*/
+}
+td.calend:hover{
+    background: url("fundo_cell_transparente.png") repeat;
+	border-radius: 2px 2px 2px 2px;
+}
+td.calend:active{
+    background: url("fundo_cell_active.png") repeat;
+}
+td.hoje{
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: url("fundo_cell_hoje.png") repeat;
+    /*color: #a0b;*/
+	border-radius: 2px 2px 2px 2px;
+}
+td.hoje:hover{
+    background: url("fundo_cell_hover.png") repeat;
+}
+td.hoje:active{
+    background: url("fundo_cell_active.png") repeat;
+}
+input.calend{
+    width: 25px;
+    height: 25px;
+}
+input.ctrl{
+	background: none;
+	border: none;
+}
+input.ctrl:hover{
+	box-shadow: 1px 1px 2px black;
+}
+div.div_table{
+    background: white;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 1px 1px 2px;
+	z-index: 1000;
+	padding: 2px;
+	width: 156px;
+	display: none;
+	position: absolute;
+	left: 0px;
+}

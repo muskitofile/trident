@@ -1,43 +1,71 @@
 <?php
 
-$content = new Div("div_ssinst");
-$content->addBrother(new Style("s3/ssinst/index.css"));
-$content->addBrother(new Script("s3/ssinst/ssinst.js"));
+include "includes.php"; // todos os includes desta página foram colocados em uma página a parte
+                        // para despoluir o visual desta.
 
-$div = $content->add(new Div("div_menu"));
-$div->style["float"] = "left";
-$div->style["margin"] = "10px";
+$page = new Html("Sistema de Instrução Online");
+$page->getHead()->addStyleLink("index.css");
+$div = $page->add(new Div("div_main"));
+$div->add(new Header("COMANDO DA AERONÁUTICA"));
+$div->add(new Header("SEGUNDA FORÇA AÉREA"));
+$div->add(new Header("3º/7º GAV"));
 
-$divAcc = $div->add(new MenuAccordion("menuAcc"));
-$divAcc->setPrefix("../");
+$divAcc = $div->add(new MenuAccordion("menu"));
 $menuP = $divAcc->addMenu("princ","Principal");
-    $menuP->addItem("Registrar Voo");
-    $menuP->addItem("Ficha de Voo");
+$menuP->addItem("Registrar Voo");
+$menuP->addItem("Ficha de Voo");
 $menuP = $divAcc->addMenu("meusd","Meus Dados");
-    $menuP->addItem("Minhas Fichas");
-    $menuP->addItem("Meus Voos");
-    $menuP->addItem("Outros Dados");
-$menu = $divAcc->addMenu("avanc","Avançado");
-    $menu->addItem("Gerenciar Itens");
-    $menu->addItem("Gerenciar Fichas");
+$menuP->addItem("Minhas Fichas");
+$menuP->addItem("Meus Voos");
 
-$div = $content->add(new Div("div_main"));
-$div->style["float"] = "left";
-$div->style["margin"] = "10px";
-$field = $div->add(new Fieldset("ENTRE COM OS DADOS PRELIMINARES DO VOO"));
-$form = $field->add(new Form("nova_ficha"));
-$form->add(new Label("Aluno: "))->class = "label";
-$txt_al = $form->addText("aluno");
-$txt_al->id = "txt_al";
-$txt_al->style['width'] = "57px";
-$txt_al->placeholder = "saram";
+$divAcc->script->addSrc("../jquery_ui/jquery-1.9.1.js");
+$divAcc->script->addSrc("../jquery_ui/ui/jquery.ui.core.js");
+$divAcc->script->addSrc("../jquery_ui/ui/jquery.ui.widget.js");
+$divAcc->script->addSrc("../jquery_ui/ui/jquery.ui.position.js");
+$divAcc->script->addSrc("../jquery_ui/ui/jquery.ui.menu.js");
+$divAcc->script->addSrc("../jquery_ui/ui/jquery.ui.accordion.js");
+$codigo = <<<codigo
+$(function(){
+    $("#menu").accordion({collapsible: true});
+    $("#princ").menu();
+    $("#meusd").menu();
+    // aqui mais código javascript para a página
+});
+codigo;
+$menuP->script->addExe($codigo);
+    $estilos = <<<estilo
+.ui-menu{
+    font-size: 6pt;
+    font-family: Times New Roman;
+    width: auto;
+    z-index: 1000;
+}
+          
+.ui-menu-item a{
+    height: 40px;
+}
+            
+.ui-accordion .ui-accordion-content, .ui-widget-content{
+    padding: 10px;
+    height: auto;
+    max-height: none;
+    font-family: Times New Roman;
+}
+estilo;
+$menuP->estilo->addRegra($estilos);
+$menuP->estilo->addHref("../jquery_ui/themes/base/jquery.ui.all.css");
 
-$form->add(new BreakLine());
+Conexao::setBD("instrucao");
+$form = $div->add(new Form());
+$lista = $form->add(new Lista());
+$lista->addItem("Aluno: ")->add($form->addText("aluno"));
+$slc_funcao = $lista->addItem("Função: ")->add($form->addSelect("funcao"));
+    $slc_funcao->addItems(Conexao::query("select * from funcao"));
+$lista->addItem("Missão: ")->add($form->addText("missao"));
+$lista->addItem("Data: ")->add($form->addText("data"));
+$button = $form->addButton("enviar");
+$button->value = "Enviar";
+$lista->addItem($button);
 
-$form->add(new Label("Programa: "))->class = "label";
-$slc_prog = $form->addSelect("slc_prog");
-Conexao::setDB("instrucao");
-$items = Conexao::campoUnico("select descricao from programa order by ordem");
-$slc_prog->addItems($items);
-
+$page->show();
 ?>

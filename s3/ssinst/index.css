@@ -13,33 +13,4 @@ h3{
     border: 1px solid black;
     width: 800px;
     height: auto;
-    background: white;
-}
-
-#div_ssinst{
-    background: #acd;
-    border: 1px solid black;
-    border-radius: 4px;
-    height: fit-content;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.ui-accordion-header.ui-state-default.ui-state-hover{
-    color: white;
-}
-
-.ui-accordion-header.ui-state-default{
-    background: #adf;
-    color: black;
-    border: 1px solid black;
-}
-
-.ui-accordion-header.ui-state-default.ui-state-active{
-    background: #4af;
-    color: black;
-}
-
-.ui-accordion-content.ui-accordion-content-active{
-    border: 1px solid black;
 }
